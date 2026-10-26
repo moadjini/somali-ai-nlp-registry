@@ -258,9 +258,9 @@ New resources, corrections, and broken-link reports are welcome. See [`CONTRIBUT
 
 Citation metadata is in [`CITATION.cff`](CITATION.cff) (GitHub shows a "Cite this repository" button). Suggested citation:
 
-> Mohamud, M. M. (2026). *Somali AI & NLP Resources Registry* (Version 2026-10-26) [Data set]. GitHub. https://github.com/moadjini/somali-ai-nlp-registry
+> Muad Mohamed Mohamud. (2026). *Somali AI & NLP Resources Registry* (Version 2026-10-26) [Data set]. GitHub. https://github.com/moadjini/somali-ai-nlp-registry
 
-The registry accompanies the paper *Mapping the Landscape of Artificial Intelligence and Natural Language Processing Resources for the Somali Language: A Scoping Survey of Datasets, Models, and Research Gaps* (Mohamud, 2026; unpublished manuscript). Please also cite the original source of any resource you use.
+The registry accompanies the paper *Mapping the Landscape of Artificial Intelligence and Natural Language Processing Resources for the Somali Language: A Scoping Survey of Datasets, Models, and Research Gaps* by Muad Mohamed Mohamud (2026; unpublished manuscript). Please also cite the original source of any resource you use.
 
 ## License
 
