@@ -1,0 +1,81 @@
+name: New resource
+description: Suggest a Somali AI or NLP resource for the registry
+title: "[New resource] "
+labels: ["new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please read CONTRIBUTING.md first. The registry stores **metadata and links only**; do not attach datasets or model files. Write `Not reported` instead of guessing.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source URL
+      description: The paper, dataset or model card, catalog record, or institutional page that documents the resource.
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date you checked the source (YYYY-MM-DD)
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Text corpora
+        - Pretrained language models
+        - Lemmatization
+        - LLM evaluation
+        - Speech recognition
+        - Text-to-speech
+        - Machine translation
+        - Sentiment and text classification
+        - Dialect identification
+        - Information retrieval
+        - Other (explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details as stated by the source
+      description: Creator, year, size with units, results, language variety, annotation, and anything else the source reports.
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License or terms (as stated by the source)
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access status
+      options:
+        - Open
+        - On request or licensed
+        - Not released
+        - Not documented
+  - type: textarea
+    id: links
+    attributes:
+      label: Other links (dataset, code, model)
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked these values against the primary source and did not guess any of them.
+          required: true
+        - label: I searched the data/ files and did not find this resource.
+          required: true
+        - label: I am submitting metadata and links only, not a dataset or model.
+          required: true

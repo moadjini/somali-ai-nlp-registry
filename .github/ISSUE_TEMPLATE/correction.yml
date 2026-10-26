@@ -1,0 +1,38 @@
+name: Correction
+description: Report a wrong or outdated value in an existing entry
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry id
+      placeholder: S6
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Column that is wrong
+      placeholder: license_terms
+    validations:
+      required: true
+  - type: textarea
+    id: values
+    attributes:
+      label: Current value and the value it should have
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Primary source showing the correct value
+      description: A link to the creators' page, the paper, or the official record.
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date you checked the source (YYYY-MM-DD)
+    validations:
+      required: true

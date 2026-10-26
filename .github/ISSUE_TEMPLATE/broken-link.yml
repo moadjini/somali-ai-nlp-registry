@@ -1,0 +1,29 @@
+name: Broken link
+description: Report a link that no longer works
+title: "[Broken link] "
+labels: ["broken-link"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A link that fails once, or only for an automated checker, does not mean the resource is gone. Please open it in a browser before reporting.
+  - type: input
+    id: entry
+    attributes:
+      label: Entry id
+      placeholder: T1
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: The link that fails
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happens, and the date you tried
+      description: If you know the resource's new official location, give it with a source. Do not guess.
+    validations:
+      required: true

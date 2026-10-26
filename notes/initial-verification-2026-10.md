@@ -1,3 +1,46 @@
+> **Historical record. Superseded on 26 October 2026.**
+>
+> This checklist documents a verification pass made on 7 October 2026 for an earlier 22-entry draft of the registry. It is kept unchanged below for provenance. **It is not the current inventory.** The current inventory is [`data/somali_resources_2026-10-26.csv`](../data/somali_resources_2026-10-26.csv), which follows the paper's Appendix A and was re-verified on 26 October 2026. Where this checklist and the current data differ, the current data apply.
+>
+> **How the open items below were resolved:**
+>
+> - IDs `SOMREG-001` to `SOMREG-022` were replaced by the paper's Appendix A IDs (crosswalk below).
+> - MATERIAL hours: the inventory uses the LDC catalog's ~80 h (S4).
+> - planwise-data: recorded as a 100-row public sample, with the full set on request (M4).
+> - CC-100: moved to the multilingual file (X01), not counted. Its Somali size (~62M tokens) was checked against the XLM-R paper.
+> - Ogaal ASR: training data recorded as private. Hugging Face metadata showed an Apache-2.0 license on 26 October 2026, not "other" (S6).
+> - Research-study entries are counted under the paper's rules, with access status "Not released".
+> - Omissions: soWaC (T4), the LORELEI Somali pack (T5), AfriVoices-KE (S7), and the lemmatization corpus (G1) were added. The LREC 2020 MT benchmark is on the watchlist (W02).
+> - Files mentioned below: `data/watchlist.csv` is replaced by `data/watchlist_2026-10-26.csv`, and `scripts/check_links.py` has been rewritten. `CODE_OF_CONDUCT.md` is not included; conduct is covered in `CONTRIBUTING.md`.
+> - Licenses: CC BY 4.0 for registry metadata and documentation, MIT for scripts (see `LICENSE`). The repository URL is in `CITATION.cff`. No survey DOI exists yet.
+>
+> | Former ID | Entry | Current ID |
+> |---|---|---|
+> | SOMREG-001 | SomaliWeb v1 | T1 |
+> | SOMREG-002 | RCF-SC | T2 |
+> | SOMREG-003 | SomNLP-Corpus (now Somali NLP Corpus) | T3 |
+> | SOMREG-004 | CC-100 Somali | X01 (multilingual file; not counted) |
+> | SOMREG-005 | SomBERTa pretraining corpus | L1 (counted with the model) |
+> | SOMREG-006 | Somali IR corpus | R1 |
+> | SOMREG-007 | Menon et al. (2018) | S2 |
+> | SOMREG-008 | Biswas et al. (2019) | S3 |
+> | SOMREG-009 | MATERIAL pack | S4 |
+> | SOMREG-010 | Digital Divide Data set | S5 |
+> | SOMREG-011 | Ogaal ASR | S6 |
+> | SOMREG-012 | Ali (2026) | D1 |
+> | SOMREG-013 | tufaax pairs | M1 |
+> | SOMREG-014 | Thiomi Somali-English | M2 |
+> | SOMREG-015 | Kuwanto et al. | M3 |
+> | SOMREG-016 | planwise-data STEM lexicon | M4 |
+> | SOMREG-017 | JUST machine translation system | W06 (watchlist; no data, method, or evaluation) |
+> | SOMREG-018 | Abdirahman et al. (2023) | C1 |
+> | SOMREG-019 | SIMAD Twitter hate-speech set | C2 |
+> | SOMREG-020 | SomBERTa datasets | C3 |
+> | SOMREG-021 | Ahmad et al. (2025) | X11 (multilingual file; not counted) |
+> | SOMREG-022 | Gedi et al. (2026) | D2 |
+
+---
+
 # Initial verification report (2026-10-07)
 
 Reviewer checklist for the 22 initial entries. Written for the maintainer's final human review; delete or keep as provenance before publishing.

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: >-
+  If you use this registry, please cite it using the metadata below.
+  When you use a listed resource, also cite that resource's own paper or dataset page.
+type: dataset
+title: "Somali AI & NLP Resources Registry"
+version: "2026-10-26"
+abstract: >-
+  A registry of publicly documented Somali artificial intelligence and natural
+  language processing resources (text corpora, speech datasets, translation
+  resources, classification datasets, language models, and evaluation sets).
+  It records metadata and links to original sources and does not host
+  third-party datasets or models. The 2026-10-26 snapshot lists 33
+  Somali-focused resources identified in a scoping survey.
+authors:
+  - family-names: Mohamud
+    given-names: Muad Mohamed
+repository-code: "https://github.com/moadjini/somali-ai-nlp-registry"
+url: "https://github.com/moadjini/somali-ai-nlp-registry"
+license: CC-BY-4.0
+keywords:
+  - Somali
+  - natural language processing
+  - low-resource languages
+  - language resources
+  - speech recognition
+  - machine translation
+  - resource registry
