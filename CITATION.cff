@@ -15,6 +15,7 @@ abstract: >-
 authors:
   # Full name kept as one unit so citation tools do not shorten it to "Mohamud, M. M."
   - name: "Muad Mohamed Mohamud"
+    orcid: "https://orcid.org/0009-0009-9700-3622"
 repository-code: "https://github.com/moadjini/somali-ai-nlp-registry"
 url: "https://github.com/moadjini/somali-ai-nlp-registry"
 license: CC-BY-4.0
