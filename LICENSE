@@ -1,21 +1,4 @@
-Somali AI & NLP Resources Registry
 Copyright (c) 2026 Muad Mohamed Mohamud and contributors
-
-SCOPE OF THIS LICENSE
-
-The registry's own metadata and documentation (the CSV files in data/, the
-Markdown documents, and CITATION.cff) are licensed under the Creative Commons
-Attribution 4.0 International Public License (CC BY 4.0), reproduced below.
-
-This license does NOT apply to the datasets, corpora, models, software, or
-papers that the registry describes or links to. Each of those remains under
-the license and terms set by its own creators, as recorded in the
-license_terms column. No third-party data is hosted in this repository.
-
-Code in scripts/ is licensed under the MIT License, as stated in the header of
-each script.
-
------------------------------------------------------------------------
 
 Attribution 4.0 International
 
@@ -412,3 +395,10 @@ the avoidance of doubt, this paragraph does not form part of the
 public licenses.
 
 Creative Commons may be contacted at creativecommons.org.
+
+=======================================================================
+
+Scope: this license applies to the registry's own metadata and
+documentation. It does not apply to the third-party datasets, models, or
+other material that the registry describes or links to; each remains under
+its own license.
