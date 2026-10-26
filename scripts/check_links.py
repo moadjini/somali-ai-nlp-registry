@@ -30,7 +30,7 @@ import ssl
 import sys
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -170,7 +170,8 @@ def validate_csv(kind, path, errors):
             errors.append(f"{tag}: id prefix '{rid[:1]}' requires category '{schema['prefix'][rid[:1]]}'")
         when = row[schema["date_field"]]
         try:
-            if date.fromisoformat(when) > date.today():
+            # One day of leeway: dates are recorded in the checker's local time, CI runs in UTC.
+            if date.fromisoformat(when) > date.today() + timedelta(days=1):
                 errors.append(f"{tag}: {schema['date_field']} {when} is in the future")
         except ValueError:
             errors.append(f"{tag}: {schema['date_field']} must be YYYY-MM-DD, found '{when}'")
