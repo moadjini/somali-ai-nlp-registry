@@ -4,7 +4,7 @@ A registry of publicly documented artificial intelligence (AI) and natural langu
 
 The registry is an **index**. It records metadata about each resource and links to the original source. It does **not** host or redistribute any third-party dataset, corpus, audio, or model.
 
-**Current snapshot:** 26 October 2026. It contains 33 Somali-focused resources, 14 large multilingual resources with Somali components, and a watchlist of 12 items that are documented but not counted. The registry is **not comprehensive** (see [Limitations](#limitations)).
+**Current snapshot:** 26 October 2026. It contains 35 Somali-focused resources, 14 large multilingual resources with Somali components, and a watchlist of 10 items that are documented but not counted. The registry is **not comprehensive** (see [Limitations](#limitations)).
 
 ## Contents
 
@@ -26,7 +26,7 @@ The registry is an **index**. It records metadata about each resource and links 
 
 | Path | Contents |
 |---|---|
-| [`data/somali_resources_2026-10-26.csv`](data/somali_resources_2026-10-26.csv) | The 33 Somali-focused resources, one per row (Appendix A of the accompanying paper) |
+| [`data/somali_resources_2026-10-26.csv`](data/somali_resources_2026-10-26.csv) | The 35 Somali-focused resources, one per row (Appendix A of the accompanying paper) |
 | [`data/multilingual_resources_2026-10-26.csv`](data/multilingual_resources_2026-10-26.csv) | 14 large multilingual benchmarks, corpora, and models with Somali components (not counted) |
 | [`data/watchlist_2026-10-26.csv`](data/watchlist_2026-10-26.csv) | Items that are documented but not counted, each with the reason |
 | [`scripts/check_links.py`](scripts/check_links.py) | Validates the CSV files and, optionally, checks that their URLs respond |
@@ -69,8 +69,8 @@ Somali-focused resources by category and documented access status, as of 26 Octo
 | Category | Resources | Open | On request or licensed | Not released | Not documented |
 |---|---|---|---|---|---|
 | Speech recognition | 11 | 3 | 3 | 5 | 0 |
-| Text corpora | 5 | 3 | 1 | 0 | 1 |
-| Machine translation | 4 | 1 | 1 | 2 | 0 |
+| Text corpora | 6 | 4 | 2 | 0 | 0 |
+| Machine translation | 5 | 2 | 1 | 2 | 0 |
 | Sentiment and text classification | 3 | 0 | 0 | 2 | 1 |
 | Pretrained language models | 2 | 1 | 0 | 1 | 0 |
 | Text-to-speech | 2 | 1 | 0 | 1 | 0 |
@@ -78,7 +78,7 @@ Somali-focused resources by category and documented access status, as of 26 Octo
 | Information retrieval | 2 | 1 | 0 | 0 | 1 |
 | Lemmatization | 1 | 0 | 0 | 0 | 1 |
 | LLM evaluation | 1 | 1 | 0 | 0 | 0 |
-| Total | 33 | 11 | 6 | 12 | 4 |
+| Total | 35 | 13 | 7 | 12 | 3 |
 <!-- category-counts:end -->
 
 No optical character recognition (OCR) resource or conversational AI system met the inclusion criteria within the search scope. Several are described on project pages without data, method, or evaluation; they are listed in the watchlist. A zero means "not identified within this search scope", not that no such resource exists.

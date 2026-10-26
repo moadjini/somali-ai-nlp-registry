@@ -10,7 +10,7 @@ abstract: >-
   language processing resources (text corpora, speech datasets, translation
   resources, classification datasets, language models, and evaluation sets).
   It records metadata and links to original sources and does not host
-  third-party datasets or models. The 2026-10-26 snapshot lists 33
+  third-party datasets or models. The 2026-10-26 snapshot lists 35
   Somali-focused resources identified in a scoping survey.
 authors:
   - family-names: Mohamud
