@@ -63,6 +63,7 @@ SCHEMAS = {
             "license_basis": {"Stated by provider", "Stated in paper", "Provider metadata only",
                               "Not stated", "Not verified", "Not applicable"},
             "verification_level": {"Verified", "Partially verified", "Unverified"},
+            "language_variety": {"Maxaa Tiri (Standard Somali)", "Maay", "Maxaa Tiri and Maay", "Not specified"},
             "discovery_phase": {"Main search", "Speech follow-up", "Somali-language pilot", "Final update",
                                 "Contribution"},
         },

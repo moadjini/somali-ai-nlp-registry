@@ -15,6 +15,7 @@ The registry is an **index**. It records metadata about each resource and links 
 - [Research methodology](#research-methodology)
 - [Data files and fields](#data-files-and-fields)
 - [How to read the evidence](#how-to-read-the-evidence)
+- [Known issues](#known-issues)
 - [Limitations](#limitations)
 - [Using listed resources responsibly](#using-listed-resources-responsibly)
 - [Validating the data and checking links](#validating-the-data-and-checking-links)
@@ -114,7 +115,9 @@ The `discovery_phase` column records the phase in which each item was found. Sea
 
 ## Data files and fields
 
-All files are UTF-8 (without byte-order mark), comma-separated, quoted where needed, and have one header row. Lists inside a field are separated by semicolons. Each file name carries its snapshot date. Later releases add a new dated file and leave earlier snapshots unchanged.
+All files are UTF-8 (without byte-order mark), comma-separated, quoted where needed, and have one header row. Lists inside a field are separated by semicolons.
+
+**Versioning and updates.** Each file name carries its snapshot date, and the snapshot date is the registry version (for example `2026-10-26`, as in `CITATION.cff`). Corrections to existing entries are made in place, recorded in Git history, and shown by the row's `date_last_verified`. Adding or removing resources creates a new dated file, and earlier files are then left unchanged. There is no fixed release schedule; entries should be re-checked at least once a year and whenever a correction or broken-link report arrives.
 
 ### `somali_resources_2026-10-26.csv`
 
@@ -122,19 +125,19 @@ All files are UTF-8 (without byte-order mark), comma-separated, quoted where nee
 |---|---|
 | `id` | Identifier from Appendix A of the paper. The prefix gives the category: T text corpora; L pretrained language models; G lemmatization; E LLM evaluation; S speech recognition; P text-to-speech; M machine translation; C sentiment and text classification; D dialect identification; R information retrieval. IDs are never reused. |
 | `resource_name` | Name of the resource or study, as given by its source |
-| `category` | Primary task group (controlled values; see below) |
+| `category` | Primary task group used for counting, matching Figure 1 of the paper (controlled values; see below). It says what a resource is for, not what kind of artifact it is: a speech corpus and a speech model are both `Speech recognition`. |
 | `task` | Task or tasks the resource supports, as described by the source |
-| `artifact_type` | Kind of artifact: corpus, dataset, model, study, and so on |
+| `artifact_type` | Kind of artifact: corpus, dataset, model, study, and so on. Use it with `category` to separate data from systems and studies. |
 | `creator` | People or organizations credited by the source |
 | `year` | Year of release or publication, or `Not reported` |
-| `language_variety` | Somali variety or dialect where the source states one (for example Maxaa Tiri or Maay); otherwise `Not reported` |
+| `language_variety` | Dialect coverage stated by the source (controlled values; see below). Other language details, such as where audio was recorded, are in `notes`. |
 | `reported_size` | Size as reported by the source, with units; not normalized across entries |
 | `reported_results` | Headline evaluation results as reported by the source; not reproduced |
 | `annotation` | Annotation or labels the source describes |
-| `source_url` | Primary source that documents the resource (paper DOI, catalog record, or card) |
+| `source_url` | Primary source that documents the resource (paper DOI, catalog record, or card). When one page both documents and distributes a resource, `source_url` and `resource_url` hold the same link. |
 | `resource_url` | Where the artifact itself can be found, or `Not released` / `Not reported` |
 | `additional_urls` | Further relevant links (code, related versions), separated by semicolons; may be empty |
-| `evidence_type` | Strongest source reviewed, as in Appendix A |
+| `evidence_type` | Source types reviewed, as in Appendix A, strongest first and separated by semicolons (for example peer-reviewed paper, preprint, dataset or model card, data-catalog record, institutional or company page) |
 | `access_status` | Documented access category (controlled values; see below) |
 | `access_detail` | How access works in practice, as documented |
 | `license_terms` | License and terms of use as documented by the provider or paper |
@@ -210,6 +213,8 @@ Items documented somewhere but not counted, kept so that they are not lost or re
 
 **`discovery_phase`:** Main search; Speech follow-up; Somali-language pilot; Final update; Contribution (for entries added later through contributions).
 
+**`language_variety`:** Maxaa Tiri (Standard Somali); Maay; Maxaa Tiri and Maay; Not specified (the source does not say which variety it covers).
+
 **Placeholders.** `Not reported` means the source was checked and does not state the value. `Not applicable` means the field does not apply. `Not released`, `Not reviewed`, and `Not verified` are used in URL fields when there is nothing to link, when a location was not reviewed, or when no primary source could be confirmed. Values are never guessed.
 
 ## How to read the evidence
@@ -220,6 +225,21 @@ The registry separates four kinds of information:
 - **Reported claims.** `reported_size` and `reported_results` repeat what each source reports. Figures from company or institutional pages are self-reported; check `evidence_type`. Results use different test sets and metrics, so they are not comparable across entries.
 - **Inaccessible resources.** `access_status` and `access_detail` describe access as documented. Access was not tested by downloading every item. Unreachable pages are noted in `notes` or in the watchlist.
 - **License certainty.** `license_basis` shows whether the license comes from the provider, only from a paper, only from platform metadata, or is not stated.
+
+## Known issues
+
+Entries that are unresolved or need care before use, as of the snapshot date:
+
+| Entries | Issue |
+|---|---|
+| C2 | Partially verified: the provider's page gives no labels, license, or download link, and no copy was found elsewhere. Contacting the SIMAD AI Institute is the remaining way to resolve it. |
+| G1, R1 | No download location is given in the sources reviewed, and no license is stated. |
+| T2 | Searchable online with accounts on request, but no bulk download and no stated license; the 2016 paper, the 2025 study, and the live platform give different sizes. |
+| M5 | Models can be downloaded, but neither the recipes repository nor the download page states a license. |
+| S7 | The license (CC BY 4.0) is stated only in the paper; the Hugging Face page shows none and requires manual approval. |
+| S9 | Commercial; license terms are provided only with a quote. |
+| L1, C3, M2, P2, S10, S11 | Announced but not yet released. Check the source for a release before relying on these entries. |
+| S5 | The dataset title says 68 hours; its datasheet says about 70 hours. |
 
 ## Limitations
 
