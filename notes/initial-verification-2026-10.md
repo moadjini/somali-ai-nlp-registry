@@ -12,7 +12,7 @@
 > - Research-study entries are counted under the paper's rules, with access status "Not released".
 > - Omissions: soWaC (T4), the LORELEI Somali pack (T5), AfriVoices-KE (S7), and the lemmatization corpus (G1) were added. The LREC 2020 MT benchmark (Duh et al., 2020) is counted as M5, and the corpus used to pretrain SomGPT is counted as T6.
 > - Files mentioned below: `data/watchlist.csv` is replaced by `data/watchlist_2026-10-26.csv`, and `scripts/check_links.py` has been rewritten. `CODE_OF_CONDUCT.md` is not included; conduct is covered in `CONTRIBUTING.md`.
-> - Licenses: CC BY 4.0 for registry metadata and documentation, MIT for scripts (see `LICENSE`). The repository URL is in `CITATION.cff`. No survey DOI exists yet.
+> - Licenses: CC BY 4.0 for registry metadata and documentation, MIT for scripts (see [`NOTICE.md`](../NOTICE.md); the MIT text is in [`LICENSES/MIT.txt`](../LICENSES/MIT.txt)). The repository URL is in `CITATION.cff`. No survey DOI exists yet.
 >
 > | Former ID | Entry | Current ID |
 > |---|---|---|

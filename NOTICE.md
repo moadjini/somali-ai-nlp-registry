@@ -5,7 +5,7 @@ Somali AI & NLP Resources Registry. Copyright (c) 2026 Muad Mohamed Mohamud and 
 ## What the licenses cover
 
 - **Registry metadata and documentation.** The CSV files in `data/`, the Markdown documents, and `CITATION.cff` are licensed under the Creative Commons Attribution 4.0 International license (CC BY 4.0). The full text is in [`LICENSE`](LICENSE).
-- **Code.** The code in `scripts/` is licensed under the MIT License, as stated in each file's header.
+- **Code.** The code in `scripts/` is licensed under the MIT License, as stated in each file's header. The full text is in [`LICENSES/MIT.txt`](LICENSES/MIT.txt).
 
 ## What the licenses do not cover
 

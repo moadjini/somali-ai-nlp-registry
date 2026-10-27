@@ -35,6 +35,7 @@ The registry is an **index**. It records metadata about each resource and links 
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to propose resources, report problems, and submit changes |
 | [`CITATION.cff`](CITATION.cff) | Citation metadata |
 | [`LICENSE`](LICENSE) | CC BY 4.0 for the registry's own metadata and documentation |
+| [`LICENSES/MIT.txt`](LICENSES/MIT.txt) | MIT License for the code in `scripts/` |
 | [`NOTICE.md`](NOTICE.md) | What the licenses cover and what they do not cover (third-party resources) |
 
 ## Quick start
@@ -285,5 +286,5 @@ The registry accompanies the paper *Mapping the Landscape of Artificial Intellig
 ## License
 
 - **Registry metadata and documentation** (the CSV files and the Markdown documents) are licensed under the [Creative Commons Attribution 4.0 International license](LICENSE) (CC BY 4.0).
-- **Code** in `scripts/` is licensed under the MIT License, as stated in each file's header.
+- **Code** in `scripts/` is licensed under the [MIT License](LICENSES/MIT.txt), as stated in each file's header.
 - **Listed resources are not covered.** Each dataset, corpus, model, or paper remains under its own license and terms, as recorded in `license_terms`. This registry grants no rights in them. See [`NOTICE.md`](NOTICE.md).
